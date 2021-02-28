@@ -64,6 +64,7 @@ module.exports = (app) => {
         res.json(true);
     });
 
-    
-
+    app.get("/api/notes/:id", function(req,res) {
+        res.json(jsonDb[req.params.id]);
+    });
 }
